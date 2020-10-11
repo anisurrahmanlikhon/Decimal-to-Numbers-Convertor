@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
+<html>
+<body>
 
-You can use the [editor on GitHub](https://github.com/anisurrahmanlikhon/Decimal-to-Binary-Octal-Hexadecimal-Convertor/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+<input type="button" value="Convert!" onclick="dec2bin()" />
+<br><br>
+<div id = "result"></div>
 
-### Markdown
+<script type = "text/javascript">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+function dec2bin() {
+var x = document.getElementById("deci").value;
+if ((/[^0-9]/g.test(x)) || x == "") {
+alert ("You must enter an integer decimal number!");
+document.getElementById("deci").value = "";
+document.getElementById("deci").focus();
+return false;
+}
+x = parseInt(x);
+var bin = x.toString(2);
+var hex = x.toString(16).toUpperCase();
+var octal = x.toString(8);
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+var figs = "The binary representation of " + x + " is " + bin + "<br>";
+figs = figs + "The hexadecimal representation of " + x + " is " + hex + "<br>";
+figs = figs + "The octal representation of " + x + " is " + octal + "<br>";
 
-- Bulleted
-- List
+document.getElementById("result").innerHTML = figs;
+}
+</script>
 
-1. Numbered
-2. List
+<p align="center"><font face="arial" size="-2"></font><br>
+<font face="arial, helvetica" size="-2"><a href="http://javascriptkit.com"></a></font></p>
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/anisurrahmanlikhon/Decimal-to-Binary-Octal-Hexadecimal-Convertor/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</body>
+</html>
