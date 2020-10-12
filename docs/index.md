@@ -2,7 +2,7 @@
 <body>
 
 
-<b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" />
+<b>Insert Decimal Number: </b><input type = "text" name = "deci" id = "deci" size = "15" maxlength = "15" /><br> <br>
 <input type="button" value="Convert!" onclick="dec2bin()" />
 <br><br>
 <div id = "result"></div>
