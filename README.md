@@ -1,3 +1,3 @@
-# Decimal-to-Binary-Octal-Hexadecimal-Convertor
+# Decimal-to-Numbers-Convertor
 
-https://anisurrahmanlikhon.github.io/Decimal-to-Binary-Octal-Hexadecimal-Convertor/
+https://anisurrahmanlikhon.github.io/Decimal-to-Numbers-Convertor/
